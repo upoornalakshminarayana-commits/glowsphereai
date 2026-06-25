@@ -1,0 +1,127 @@
+@import "tailwindcss";
+
+html {
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Custom premium scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #09090b;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 9999px;
+  border: 1px solid rgba(255, 255, 255, 0.02);
+  transition: background 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #8b5cf6, #ec4899);
+}
+
+/* Ensure smooth scrolling inside all custom scroll containers */
+.overflow-y-auto, .overflow-x-auto {
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+@layer utilities {
+  .glass-card {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 24px;
+  }
+  .glow-gradient {
+    background: radial-gradient(circle at 50% 50%, rgba(139, 92, 246, 0.15) 0%, rgba(236, 72, 153, 0.05) 50%, transparent 100%);
+  }
+  .text-gradient {
+    background: linear-gradient(to right, #8B5CF6, #EC4899, #06B6D4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .nav-blur {
+    backdrop-filter: blur(20px);
+    background: rgba(9, 9, 11, 0.8);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  }
+  .badge-ai {
+    background: linear-gradient(90deg, rgba(139, 92, 246, 0.2), rgba(6, 182, 212, 0.2));
+    border: 1px solid rgba(139, 92, 246, 0.3);
+  }
+}
+
+/* HIGH-CONTRAST LIGHT THEME SYSTEM OVERRIDES */
+.light {
+  background-color: #ffffff !important;
+  color: #09090b !important;
+  
+  --color-zinc-950: #ffffff;
+  --color-zinc-900: #f4f4f5;
+  --color-zinc-850: #e4e4e7;
+  --color-zinc-800: #e4e4e7;
+  --color-zinc-700: #d4d4d8;
+  --color-zinc-600: #a1a1aa;
+  --color-zinc-500: #71717a;
+  --color-zinc-400: #3f3f46;
+  --color-zinc-300: #27272a;
+  --color-zinc-200: #18181b;
+  --color-zinc-100: #09090b;
+  
+  --color-white: #09090b;
+  --color-black: #ffffff;
+}
+
+/* Light mode customized scrollbars */
+.light ::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+
+.light ::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/* Elegant light mode glass card overlays */
+.light .glass-card {
+  background: rgba(255, 255, 255, 0.8) !important;
+  border: 1px solid rgba(9, 9, 11, 0.1) !important;
+}
+
+/* Refined light mode blurred nav header */
+.light .nav-blur {
+  background: rgba(255, 255, 255, 0.85) !important;
+  border-bottom: 1px solid rgba(9, 9, 11, 0.08) !important;
+}
+
+/* Enforce solid backgrounds for layout containers */
+.light body,
+.light #root,
+.light main {
+  background-color: #ffffff !important;
+  color: #09090b !important;
+}
+
+/* Ensure map setup placeholder in light mode has proper border and bg contrast */
+.light #maps-setup-placeholder {
+  background-color: rgba(255, 255, 255, 0.9) !important;
+  border-color: rgba(9, 9, 11, 0.15) !important;
+}
+
+/* Ensure Google Maps Wrapper and Filter overlays display with perfect light aesthetics */
+.light #google-maps-wrapper {
+  background-color: #ffffff !important;
+  border-color: rgba(9, 9, 11, 0.1) !important;
+}
+
+.light #map-filter-overlay {
+  background-color: rgba(255, 255, 255, 0.95) !important;
+  border-color: rgba(9, 9, 11, 0.1) !important;
+}

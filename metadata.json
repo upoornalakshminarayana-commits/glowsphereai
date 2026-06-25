@@ -1,0 +1,6 @@
+{
+  "name": "GlowSphere AI",
+  "description": "Discover. Book. Glow. India's Smartest AI Beauty Marketplace.",
+  "requestFramePermissions": ["camera"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
